@@ -1,6 +1,7 @@
 ## vehicle-rental-system
 
-> erd: https://dbdiagram.io/d/vehicle-rental-system-6947fc8c4bbde0fd74ed6fb3
+> Database Diagram: https://dbdiagram.io/d/vehicle-rental-system-6947fc8c4bbde0fd74ed6fb3
+## ![Database Diagram](https://raw.githubusercontent.com/Shamiul-Lipu/db-playground/main/erd.png)
 
 ## SQL Queries
 
