@@ -1,7 +1,62 @@
 ## vehicle-rental-system
 
-> Database Diagram: https://dbdiagram.io/d/vehicle-rental-system-6947fc8c4bbde0fd74ed6fb3
+This project is a **Database Design and SQL Queries** based on a simplified **Vehicle Rental System**.  
+It demonstrates understanding of **ERD design, table relationships, primary and foreign keys**, and **SQL querying techniques**
+
+## Technologies Used
+
+- SQL
+- DBMS: Postgresql
+- ERD Tool: dbdiagram.io
+
+## System Description
+
+The Vehicle Rental System database manages:
+
+- **Users**
+- **Vehicles**
+- **Bookings**
+
+## Database Tables
+
+### Users Table
+
+- `user_id` (Primary Key)
+- `role`
+- `name`
+- `email` (Unique)
+- `password`
+- `phone`
+
+### Vehicles Table
+
+- `vehicle_id` (Primary Key)
+- `name`
+- `type`
+- `model`
+- `registration_number` (Unique)
+- `price_per_day`
+- `status`
+
+### Bookings Table
+
+- `booking_id` (Primary Key)
+- `user_id` (Foreign Key → Users)
+- `vehicle_id` (Foreign Key → Vehicles)
+- `start_date`
+- `end_date`
+- `status`
+- `total_cost`
+
+---
+
+### Database Diagram (ERD)
+
+> Database Diagram Link: https://dbdiagram.io/d/vehicle-rental-system-6947fc8c4bbde0fd74ed6fb3
+
 ## ![Database Diagram](https://raw.githubusercontent.com/Shamiul-Lipu/db-playground/main/erd.png)
+
+---
 
 ## SQL Queries
 
@@ -68,3 +123,19 @@ having
 
 **Explanation:**
 এই query-তে আমরা GROUP BY এবং HAVING ব্যবহার করেছি। আমরা প্রতিটি vehicle অনুযায়ী total bookings count করছি। তারপর HAVING COUNT > 2 ব্যবহার করে filter করছি, যাতে শুধুমাত্র সেই vehicles দেখায় যেগুলোর bookings 2 এর বেশি। এটি আমাদের analysis-এ সাহায্য করে বুঝতে কোন vehicles বেশি use হয়েছে বা high demand এ আছে।
+
+#### Concepts Demonstrated
+
+- ERD design and relationships
+
+- Primary & Foreign keys
+
+- One-to-One, One-to-Many relationships
+
+- JOIN operations
+
+- Subqueries using EXISTS
+
+- Filtering using WHERE
+
+- Aggregation using COUNT, GROUP BY, HAVING
